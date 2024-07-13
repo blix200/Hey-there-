@@ -1,0 +1,18 @@
+local gameIDs = {
+    [286090429] = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/blix200/Exware-Trash-Skid/main/keyz"))()',
+    [1008451066] = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/blix200/Exware-Trash-Skid/main/DahoodKill"))()',
+    [4864117649] = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/blix200/MainLoadshiz/main/obf_krI8TV8y82847eQf3GYE2t0w0g4WVMFKf47v9u53kZsndg509DgRcWt5lzOi7Hu5.lua"))()'
+}
+
+
+local currentGameID = game.GameId
+print("Current Game ID:", currentGameID)
+
+
+if gameIDs[currentGameID] then
+
+    loadstring(gameIDs[currentGameID])()
+else
+
+    warn("Current game ID is not supported:", currentGameID)
+end
